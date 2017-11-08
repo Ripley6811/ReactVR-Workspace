@@ -16,7 +16,7 @@ export default class WelcomeToVR extends React.Component {
           style={{
             backgroundColor: '#777879',
             fontSize: 0.8,
-            fontWeight: '400',
+            fontWeight: '200',
             layoutOrigin: [0.5, 0.5],
             paddingLeft: 0.2,
             paddingRight: 0.2,
@@ -24,8 +24,15 @@ export default class WelcomeToVR extends React.Component {
             textAlignVertical: 'center',
             transform: [{translate: [0, 0, -3]}],
           }}>
-          hello mate
+          hello you
         </Text>
+
+          <View style={{ margin: 0.1, height: 0.3, backgroundColor: 'blue', transform: [{rotateY: -10},{translate: [-1, 1, -2]}]}}>
+              <Text style={{fontSize: 0.2, textAlign: 'center'}}>Blue</Text>
+          </View>
+          <View style={{ margin: 0.1, height: 0.3, backgroundColor: 'orange', transform: [{rotateY: -20},{translate: [-1, 1, -2]}]}}>
+              <Text style={{fontSize: 0.2, textAlign: 'center'}}>Orange</Text>
+          </View>
       </View>
     );
   }
