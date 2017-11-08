@@ -8,6 +8,11 @@ import {
 } from 'react-vr';
 
 export default class WelcomeToVR extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {textColor: 'white'};
+    }
   render() {
     return (
       <View>
@@ -31,7 +36,9 @@ export default class WelcomeToVR extends React.Component {
               <Text style={{fontSize: 0.2, textAlign: 'center'}}>Blue</Text>
           </View>
           <View style={{ margin: 0.1, height: 0.3, backgroundColor: 'orange', transform: [{rotateY: -20},{translate: [-1, 1, -2]}]}}>
-              <Text style={{fontSize: 0.2, textAlign: 'center'}}>Orange</Text>
+              <Text onEnter={() => this.setState({textColor: 'red'})}
+                    onExit={() => this.setState({textColor: 'white'})}
+                    style={{fontSize: 0.2, textAlign: 'center', color:this.state.textColor}}>Orange</Text>
           </View>
       </View>
     );
